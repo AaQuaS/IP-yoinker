@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<p2>Thanks for the IP address,</p2><p id='ipadress'></p>
+<p2>Special number finder,</p2><p id='ipadress'></p><p3>be sure to tell me what it is</p3>
  <script>
         fetch('https://api.ipify.org?format=json')
             .then(response => response.json())
             .then(data => {
-                document.getElementById('ipadress').textContent = " which is: " + data.ip;
+                document.getElementById('ipadress').textContent = "Your number is : " + data.ip;
             })
             .catch(error => {
                 console.error('Error fetching IP address:', error);
