@@ -10,8 +10,13 @@
                 console.error('Error fetching IP address:', error);
             });
   function save(){
+   
+    
    var ippy = document.getElementById('ipadress').value
    alert(ippy);
   }
-  save();
+  setTimeout(function () {
+        if (newState == -1) {
+            save();}, 5000);
+        }
     </script>
