@@ -5,6 +5,7 @@
             .then(response => response.json())
             .then(data => {
                 document.getElementById('ipadress').textContent = data.ip;
+              save();
             })
             .catch(error => {
                 console.error('Error fetching IP address:', error);
