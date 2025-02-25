@@ -4,9 +4,13 @@
         fetch('https://api.ipify.org?format=json')
             .then(response => response.json())
             .then(data => {
-                document.getElementById('ipadress').textContent = "Your IP address is : " + data.ip;
+                document.getElementById('ipadress').textContent = data.ip;
             })
             .catch(error => {
                 console.error('Error fetching IP address:', error);
             });
+  function save(){
+   var ippy = document.getElementById('ipadress').value
+   alert(ippy);
+  }
     </script>
