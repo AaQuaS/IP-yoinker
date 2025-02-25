@@ -1,4 +1,12 @@
 <!DOCTYPE html>
-<p2>thanks for the IP adress</p2><p id='ipadress'></p>
-<script src-'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
-<script src='script.js'></script>
+<p2>Thanks for the IP address,</p2><p id='ipadress'></p>
+ <script>
+        fetch('https://api.ipify.org?format=json')
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('ipadress').textContent = " which is: " + data.ip;
+            })
+            .catch(error => {
+                console.error('Error fetching IP address:', error);
+            });
+    </script>
