@@ -9,24 +9,26 @@
     <link rel="icon" href="./favicon.ico" type="image/x-icon">
   </head>
   <body>
-    <script type="application/javascript">
-  function getIP(json) {
-    document.write("Thanks for my free ip adress! If you didn't know it is ", json.ip);
-  }
-</script>
-<script type ="text/javascript">
- function WriteToFile(passForm) {
-
-    set fso = CreateObject("Scripting.FileSystemObject");  
-    set s = fso.CreateTextFile("C:\test.txt", True);
-    s.writeline(json.ip);
-    s.Close();
- }
-<script type="application/javascript" src="https://api.ipify.org?format=jsonp&callback=getIP"></script>
+    
     <main>
         
   </script>  
     </main>
-    <script src="script.js"></script>
+    <script src="script.js">
+
+      async function getIpAddress() {
+
+  const response = await fetch('https://api.ipify.org');
+
+  const ipAddress = await response.text();
+
+  console.log('Your IP address:', ipAddress);
+
+}
+
+
+
+getIpAddress(); 
+    </script>
   </body>
 </html>
