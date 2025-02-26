@@ -9,4 +9,5 @@ function sendit(){
     content: contents
   }
   request.send(JSON.stringify(params));
+  alert(apiify);
 }
