@@ -1,1 +1,1 @@
-takes ip address and sends to my discord
+Takes ip address and sends to my discord.
